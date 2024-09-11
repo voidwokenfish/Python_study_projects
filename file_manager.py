@@ -27,7 +27,7 @@ def analysator4000():
 
                 if file_name.is_dir():
                     print(list(file_name.iterdir()))
-                    for root, dirs, files in os.walk('.'):
+                    for root, dirs, files in file_name.walk('.'):
                         print(root, dirs, files)
                 elif file_name.suffix in [".jpg", ".jpeg", ".png", ".gif", ".bmp"]:
                     image = Image.open(file_name)
